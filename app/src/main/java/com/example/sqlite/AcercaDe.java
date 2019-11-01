@@ -23,10 +23,10 @@ public class AcercaDe extends AppCompatActivity {
 
     public void informacion (){
 
-        tvNombre.setText("Ricardo Edenilson Gutierres Mauricio");
-        tvRedSocial.setText("Tecnico En Sitemas Informaticos");
-        tvCel.setText("75742609");
-        tvDireccion.setText("Zacatecoluca,La Paz.");
+        tvNombre.setText("Nombre del Tecnico: Ricardo Edenilson Gutierres Mauricio");
+        tvRedSocial.setText("Carrera: Tecnico En Sitemas Informaticos");
+        tvCel.setText("Telefono: 75742609");
+        tvDireccion.setText("Direccion : San Vicente, Tecoluca.");
 
     }
 }
