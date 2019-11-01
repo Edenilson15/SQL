@@ -2,7 +2,7 @@ package com.example.sqlite;
 
 import java.io.Serializable;
 
-public class Dto1 implements Serializable {
+public class Dto1  {
     int id;
     String tipo;
 
