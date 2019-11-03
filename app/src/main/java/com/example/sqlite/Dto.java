@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Dto implements Serializable {
     int codigo;
     String descripcion;
+    double precio;
     String tipo;
 
     public int getCodigo() {
@@ -39,7 +40,6 @@ public class Dto implements Serializable {
         this.precio = precio;
     }
 
-    double precio;
 
     public Dto() {
     }
