@@ -20,7 +20,7 @@ public class Ocupacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocupacion);
         etocupacion = findViewById(R.id.etocupacion);
-        etid = findViewById(R.id.etocupacion);
+        etid = findViewById(R.id.etid);
         btnguardar = findViewById(R.id.btngenerar);
 
 
@@ -40,7 +40,7 @@ public class Ocupacion extends AppCompatActivity {
             try {
                 datos1.setTipo(etocupacion.getText().toString());
 
-                if (conexion.Inserta(datos1)) {
+                if (conexion.Guarda(datos1)) {
                     Toast.makeText(this, "Registro agregado satisfactoriamente!", Toast.LENGTH_SHORT).show();
                     limpiarDatos();
                 } else {
@@ -56,4 +56,5 @@ public class Ocupacion extends AppCompatActivity {
         etocupacion.setText(null);
         etocupacion.requestFocus();
     }
+
 }

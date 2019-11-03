@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
@@ -76,8 +75,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
        return estado;
 
    }
-
-    public boolean Inserta (Dto1 datos1){
+    public boolean Guarda (Dto1 datos1){
         boolean estado = true;
         int resultado;
         try {
@@ -85,15 +83,14 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             String ocupacion = datos1.getTipo();
 
 
-
             Cursor fila = bd().rawQuery("select id from Tipo where tipo ='"+ocupacion+"'",null);
             if(fila.moveToFirst()==true){
                 estado = false;
             }else{
-                String SQL = "INSERT INTO tipo \n" +
+                String SQL = "INSERT INTO Tipo \n" +
                         "(id,tipo)\n" +
                         "VALUES \n" +
-                        "('"+ String.valueOf(id) +"', '" + ocupacion + "');";
+                        "('"+ String.valueOf(id) +"','" + ocupacion + "');";
 
                 bd().execSQL(SQL);
                 bd().close();
@@ -107,6 +104,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         return estado;
 
     }
+
 public boolean consultaCodigo(Dto datos){
        boolean estado = true;
        int resultado;
