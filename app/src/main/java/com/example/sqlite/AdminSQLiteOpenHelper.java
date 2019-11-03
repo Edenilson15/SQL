@@ -30,8 +30,8 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table empleado (codigo integer not null primary key, descripcion text, precio real,fktipo text, FOREIGN KEY (fktipo) REFERENCES Tipo(tipo))");
-        db.execSQL("create table Tipo (id integer not null primary key , tipo text)");
+        db.execSQL("create table empleado (codigo integer not null primary key autoincrement, descripcion text, precio real,fktipo integer not null constraint fk_tipo references Tipo(id) on delete CASCADE on UPDATE CASCADE)");
+        db.execSQL("create table Tipo (id integer not null primary key autoincrement, tipo text)");
 
     }
 
